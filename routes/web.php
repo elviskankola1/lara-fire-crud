@@ -27,3 +27,6 @@ Route::get('/', function () {
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/dashboard/create', 'DashboardController@create');
 Route::post('/dashboard/store', 'DashboardController@store');
+Route::get('/dashboard/edit/{id}', 'DashboardController@edit');
+Route::put('/dashboard/update/{id}', 'DashboardController@update');
+Route::get('/dashboard/hapus/{id}', 'DashboardController@destroy');
