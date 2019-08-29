@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
 //Route::get('/firebase', 'FirebaseController@index');
 //Route::get('/home', 'HomeController@index');
 //Route::get('/home/create', 'HomeController@create');
@@ -30,3 +31,5 @@ Route::post('/dashboard/store', 'DashboardController@store');
 Route::get('/dashboard/edit/{id}', 'DashboardController@edit');
 Route::put('/dashboard/update/{id}', 'DashboardController@update');
 Route::get('/dashboard/hapus/{id}', 'DashboardController@destroy');
+Route::get('signin', 'SigninController@login')->name('signin.login');
+Route::post('attempt', 'SigninController@attempt')->name('signin.attempt');
