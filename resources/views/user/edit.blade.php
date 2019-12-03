@@ -11,13 +11,13 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="/dashboard/update/{{ $user->id() }}" method="post">
+            <form action="/users/update/{{ $user->id() }}" method="post">
             {{ csrf_field() }}
             {{ method_field('PUT') }}
               <div class="box-body">
               <div class="form-group">
                   <label for="exampleInputEmail1">Nama</label>
-                  <input type="text" class="form-control" name="nama" required="required" placeholder="Enter Nama" value="{{ $user['nama'] }}">
+                  <input type="text" class="form-control" name="nama" required="required" placeholder="Enter Nama" value="{{ $user['nickname'] }}">
                 </div>              
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>

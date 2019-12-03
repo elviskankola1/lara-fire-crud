@@ -11,7 +11,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="/dashboard/store" method="post">
+            <form action="/users/store" method="post">
             {{ csrf_field() }}
               <div class="box-body">
               <div class="form-group">

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class UserController extends Controller
 {
     public function __construct(){
         static::$db = self::firestoreDatabaseInstance();
@@ -16,7 +16,7 @@ class DashboardController extends Controller
         $docRef = self::$db->collection('users');
         $snapshot = $docRef->documents();
         $user = $snapshot;   
-        return view ('dashboard', compact('user'));
+        return view ('user.index', compact('user'));
     }
 
     public function create(){
@@ -27,12 +27,12 @@ class DashboardController extends Controller
     public function store(Request $request){
         $docRef = self::$db->collection('users');
         $docRef->add([      
-            'nama' => $request->nama,
+            'nickname' => $request->nama,
             'email' => $request->email,
             'pass' =>bcrypt($request->password) 
         ]);
 
-        return redirect('/dashboard');
+        return redirect('/users');
     }
     
     public function edit($id){
@@ -49,18 +49,18 @@ class DashboardController extends Controller
         $snapshot = $docRef->snapshot();
         $user = $snapshot;
         $docRef->set([
-          'nama' => $request->nama,
+          'nickname' => $request->nama,
           'email' => $request->email,
           'pass' => $request->get('password') ? bcrypt ($request->get('password')) : $user['pass']
         ]);
 
-        return redirect('/dashboard');
+        return redirect('/users');
     }
     
     public function destroy($id){
         $docRef = self::$db->collection('users')->document($id);
         $docRef->delete();
 
-        return redirect('/dashboard');
+        return redirect('/users');
     }
 }

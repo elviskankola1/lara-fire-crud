@@ -27,12 +27,12 @@
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Users</span>
           </a>
 
         </li>
 
-        <li class="header">USERS</li>
+        <!-- <li class="header">USERS</li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-stethoscope"></i>
@@ -48,9 +48,9 @@
               <span class="label label-primary pull-right">4</span>
             </span>
           </a>
-        </li>
+        </li> -->
 
-        <li class="header">EBOOK</li>
+        <!-- <li class="header">EBOOK</li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-book"></i>
@@ -105,7 +105,7 @@
               <span class="label label-primary pull-right">4</span>
             </span>
           </a>                      
-        </li>                          
+        </li>                           -->
       </ul>
     </section>
     <!-- /.sidebar -->

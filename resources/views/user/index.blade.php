@@ -11,7 +11,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <a class="btn btn-primary" href="/dashboard/create">Tambah</a>
+            <a class="btn btn-primary" href="/users/create">Tambah</a>
             <hr>            
               <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
               <div class="row"><div class="col-sm-12">
@@ -29,12 +29,12 @@
                 @foreach($user as $data)
                 <tr role="row" class="odd">
                   <td class="sorting_1">{{ $data->id() }}</td>
-                  <td>{{ $data ['nama'] }}</td>
+                  <td>{{ $data ['nickname'] }}</td>
                   <td>{{ $data ['email'] }}</td>
                   <td>
-                  <a class="btn btn-xs btn-warning"  href="/dashboard/edit/{{ $data->id() }}">Edit</a>
+                  <a class="btn btn-xs btn-warning"  href="/users/edit/{{ $data->id() }}">Edit</a>
 
-                  <a class="btn btn-xs btn-danger" href="/dashboard/hapus/{{ $data->id() }}">Hapus</a>
+                  <a class="btn btn-xs btn-danger" href="/users/hapus/{{ $data->id() }}">Hapus</a>
                   </td>
                 </tr>
                 @endforeach

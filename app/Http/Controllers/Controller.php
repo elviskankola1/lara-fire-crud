@@ -22,7 +22,7 @@ class Controller extends BaseController
     protected static $db;
     
     protected static function firebaseDatabaseInstance(){
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/sehatpedia-firebase-key.json');
+        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/sp-62ae3-firebase-adminsdk-mn089-a2b4948dbb.json');
         $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)
             ->create();
