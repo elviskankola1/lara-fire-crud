@@ -12,7 +12,7 @@ class FirestoreController extends Controller
 
   protected static function firestoreDatabaseInstance(){
     $db = new FirestoreClient([
-      'projectId'=> 'sehatpedia-62ae3'
+      'projectId'=> 'sehat-62ae3'
     ]);
 
     return $db;

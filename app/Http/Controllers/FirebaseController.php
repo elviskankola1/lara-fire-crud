@@ -12,7 +12,7 @@ class FirebaseController extends Controller
 {
     //protected static $database;
     public function index(){
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/sehatpedia-firebase-key.json');
+        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/key.json');
         $firebase = (new Factory)
         ->withServiceAccount($serviceAccount)        
         //->withDatabaseUri('https://sehatpedia-b58e5.firebaseio.com/')        
